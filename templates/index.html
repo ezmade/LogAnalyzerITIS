@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Report's Page | all_to_the_bottom.com</title>
+    <link rel="stylesheet" href="../static/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../static/sweet-alert.css">
+</head>
+<body>  
+    <div class="back"></div>
+    <div class="content">
+        <main>
+            <div class="forma">
+                <select id="select_report" autofocus>
+                    <option value="None">Выберите отчет</option>
+                    <option value="country">По странам</option>
+                    <option value="category">По странам и категориям</option>
+                    <option value="category">По времени суток и категории</option>
+                </select>
+                <form id="category" method="GET" name="report">
+                    <select id="select_category" name="list" autofocus>
+                        <option value="None">Выберите категорию</option>
+                        <option value="fresh_fish">fresh_fish</option>
+                        <option value="canned_food">canned_food</option>
+                        <option value="semi_manufactures">semi_manufactures</option>
+                        <option value="caviar">caviar</option>
+                        <option>frozen_fish</option>
+                    </select>
+                </form>
+                <input class="submit" type="submit" value="Получить отчет" onclick="sendAlert()">
+            </div>          
+        </main>
+        
+        <footer>
+            <p>&copy; all_to_the_bottom.com</p>
+        </footer>
+    </div>
+    <script src="../static/script.js"></script>
+    <script src="../static/sweet-alert.min.js"></script>
+</body>
+</html>
