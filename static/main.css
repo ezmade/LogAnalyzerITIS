@@ -28,8 +28,6 @@ body {
     background-size: cover;
 }
 
-
-
 p {
     font-family: 'Oswald';
     font-weight: bold;
@@ -39,6 +37,13 @@ p {
 .content main {
     display: grid;
     align-items: center;
+    width: 100vw;
+}
+
+#myChart {
+    display: none;
+    margin-top: 13rem;
+    height: 40rem;
 }
 
 .forma {
@@ -60,20 +65,20 @@ input, select, form{
     background-color: rgb(236, 240, 250);
 }
 
-form {
+#category {
     display: none;
 }
 
 .submit {
     text-align: center;
     color: white;
-    background-color: rgb(57, 118, 211);
+    background-color: #3976d3;
     transition-duration: 0.1s;
 }
 
 .submit:hover {
     transition-duration: 0.3s;
-    background-color: rgb(44, 139, 44);
+    background-color: #2c8b2c;
     font-size: 1.6rem;
 }
 

@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Report's Page | all_to_the_bottom.com</title>
-    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="../static/main.css">
     <link href="https://fonts.googleapis.com/css?family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="../static/sweet-alert.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 </head>
 <body>  
     <div class="back"></div>
@@ -17,8 +18,8 @@
                 <select id="select_report" autofocus>
                     <option value="None">Выберите отчет</option>
                     <option value="country">По странам</option>
-                    <option value="category">По странам и категориям</option>
-                    <option value="category">По времени суток и категории</option>
+                    <option value="country_category">По странам и категориям</option>
+                    <option value="time_category">По времени суток и категории</option>
                 </select>
                 <form id="category" method="GET" name="report">
                     <select id="select_category" name="list" autofocus>
@@ -30,15 +31,17 @@
                         <option>frozen_fish</option>
                     </select>
                 </form>
-                <input class="submit" type="submit" value="Получить отчет" onclick="sendAlert()">
-            </div>          
+                <input class="submit" type="submit" value="Получить отчет" onclick="getReport()">
+            </div>
+            
+            <canvas id="myChart"></canvas>
         </main>
         
         <footer>
             <p>&copy; all_to_the_bottom.com</p>
         </footer>
     </div>
-    <script src="../static/script.js"></script>
-    <script src="../static/sweet-alert.min.js"></script>
+    <script src="../static/main.js"></script>
+    <script src="../static/sweet-alert.min.js"></script>	
 </body>
 </html>
